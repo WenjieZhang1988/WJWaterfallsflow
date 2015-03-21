@@ -1,0 +1,33 @@
+//
+//  WJWaterflowLayout.h
+//  WJWaterfallsflow
+//
+//  Created by apple on 13/1/14.
+//  Copyright (c) 2015年 Kevin. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@class WJWaterflowLayout;
+
+@protocol HMWaterflowLayoutDelegate <NSObject>
+
+@required
+/**
+ * 返回indexPath位置cell的高度
+ */
+- (CGFloat)waterflowLayout:(WJWaterflowLayout *)layout heightForItemAtIndexPath:(NSIndexPath *)indexPath withItemWidth:(CGFloat)width;
+
+@optional
+- (CGFloat)rowMarginInWaterflowLayout:(WJWaterflowLayout *)layout;
+- (CGFloat)columnMarginInWaterflowLayout:(WJWaterflowLayout *)layout;
+- (NSUInteger)columnsCountInWaterflowLayout:(WJWaterflowLayout *)layout;
+- (UIEdgeInsets)insetsInWaterflowLayout:(WJWaterflowLayout *)layout;
+
+@end
+
+@interface WJWaterflowLayout : UICollectionViewLayout
+
+@property (nonatomic, weak) id<HMWaterflowLayoutDelegate> delegate;
+
+@end
