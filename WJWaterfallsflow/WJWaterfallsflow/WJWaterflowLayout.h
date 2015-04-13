@@ -2,8 +2,8 @@
 //  WJWaterflowLayout.h
 //  WJWaterfallsflow
 //
-//  Created by apple on 13/1/14.
-//  Copyright (c) 2015年 Kevin. All rights reserved.
+//  Created by Kevin on 13/1/14.
+//  Copyright (c) 2013年 Kevin. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
