@@ -10,7 +10,7 @@
 
 @class WJWaterflowLayout;
 
-@protocol HMWaterflowLayoutDelegate <NSObject>
+@protocol WJWaterflowLayoutDelegate <NSObject>
 
 @required
 /**
@@ -28,6 +28,6 @@
 
 @interface WJWaterflowLayout : UICollectionViewLayout
 
-@property (nonatomic, weak) id<HMWaterflowLayoutDelegate> delegate;
+@property (nonatomic, weak) id<WJWaterflowLayoutDelegate> delegate;
 
 @end

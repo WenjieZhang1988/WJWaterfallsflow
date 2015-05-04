@@ -11,13 +11,13 @@
 #define WJCollectionW self.collectionView.frame.size.width
 
 /** 每一行之间的间距 */
-static const CGFloat HMDefaultRowMargin = 10;
+static const CGFloat WJDefaultRowMargin = 10;
 /** 每一列之间的间距 */
-static const CGFloat HMDefaultColumnMargin = 10;
+static const CGFloat WJDefaultColumnMargin = 10;
 /** 每一列之间的间距 top, left, bottom, right */
-static const UIEdgeInsets HMDefaultInsets = {10, 10, 10, 10};
+static const UIEdgeInsets WJDefaultInsets = {10, 10, 10, 10};
 /** 默认的列数 */
-static const int HMDefaultColumsCount = 3;
+static const int WJDefaultColumsCount = 3;
 
 @interface WJWaterflowLayout()
 
@@ -154,7 +154,7 @@ static const int HMDefaultColumsCount = 3;
     if ([self.delegate respondsToSelector:@selector(rowMarginInWaterflowLayout:)]) {
         return [self.delegate rowMarginInWaterflowLayout:self];
     }
-    return HMDefaultRowMargin;
+    return WJDefaultRowMargin;
 }
 
 - (CGFloat)columnMargin
@@ -162,7 +162,7 @@ static const int HMDefaultColumsCount = 3;
     if ([self.delegate respondsToSelector:@selector(columnMarginInWaterflowLayout:)]) {
         return [self.delegate columnMarginInWaterflowLayout:self];
     }
-    return HMDefaultColumnMargin;
+    return WJDefaultColumnMargin;
 }
 
 - (NSUInteger)columnsCount
@@ -170,7 +170,7 @@ static const int HMDefaultColumsCount = 3;
     if ([self.delegate respondsToSelector:@selector(columnsCountInWaterflowLayout:)]) {
         return [self.delegate columnsCountInWaterflowLayout:self];
     }
-    return HMDefaultColumsCount;
+    return WJDefaultColumsCount;
 }
 
 - (UIEdgeInsets)insets
@@ -178,7 +178,7 @@ static const int HMDefaultColumsCount = 3;
     if ([self.delegate respondsToSelector:@selector(insetsInWaterflowLayout:)]) {
         return [self.delegate insetsInWaterflowLayout:self];
     }
-    return HMDefaultInsets;
+    return WJDefaultInsets;
 }
 
 @end
